@@ -3,36 +3,36 @@ using namespace std;
 
 int main()
 {
-    // cout<<"Enter the Value of N"<<endl;
-    // int n;
-    // cin>> n;
-    // for (int i = 1; i<=n; i++){
-    //     cout<<i<<endl;
-    // }
+    cout<<"Enter the Value of N"<<endl;
+    int n;
+    cin>> n;
+    for (int i = 1; i<=n; i++){
+        cout<<i<<endl;
+    }
 
     // sum of all number
-    // cout<<"Enter the Value of N"<<endl;
-    // int n;
-    // cin>> n;
-    // int sum = 0;
-    // for (int i = 1; i<=n; i++){
-    //     sum += i;
-    // }
-    // cout<<sum<<endl;
+    cout<<"Enter the Value of N"<<endl;
+    int n;
+    cin>> n;
+    int sum = 0;
+    for (int i = 1; i<=n; i++){
+        sum += i;
+    }
+    cout<<sum<<endl;
 
     // fabonacci series
-    //  cout<<"Enter the Value of N"<<endl;
-    //  int n;
-    //  cin>> n;
-    //  int a = 0;
-    //  int b = 1;
-    //  cout<< a << " " << b << " ";
-    //  for (int i = 1; i <= n; i++){
-    //      int nextNum = a + b;
-    //      cout<<nextNum<< " ";
-    //      a = b;
-    //      b = nextNum;
-    //  }
+     cout<<"Enter the Value of N"<<endl;
+     int n;
+     cin>> n;
+     int a = 0;
+     int b = 1;
+     cout<< a << " " << b << " ";
+     for (int i = 1; i <= n; i++){
+         int nextNum = a + b;
+         cout<<nextNum<< " ";
+         a = b;
+         b = nextNum;
+     }
 
     // prime number
     cout << "Enter the Value of N" << endl;
