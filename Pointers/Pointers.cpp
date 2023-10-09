@@ -22,6 +22,8 @@ int main()
     cout << "The address of d in p " << p << endl; // only print the addrress of d which is assign to p
     cout << "The value of p " << *p << endl;         // only print the value of d which is assign to p
 
+    // example of pointers and increament before and after
+
     int n1 = 9;
     cout<<"the value of n1 "<<n1<<endl;
     int a = n1;
@@ -31,6 +33,10 @@ int main()
     int *p1 = &n1;
     cout<<"the address of n1 "<<p1<<endl;
     cout<<"the value of n1 before increament "<<*p1<<endl;
-    (*p1)++;
+    (*p1)++; 
     cout<<"the value of n1 after increament "<<*p1<<endl;
+
+    // copying the pointers
+     int *q = p1; // store the address of p1 in *q
+    cout<<"the value of *p1 "<<*p1<<" the value of *q "<<*q<<endl;
 }
