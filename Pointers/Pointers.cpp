@@ -39,4 +39,12 @@ int main()
     // copying the pointers
      int *q = p1; // store the address of p1 in *q
     cout<<"the value of *p1 "<<*p1<<" the value of *q "<<*q<<endl;
+
+    // important concept 
+    int m = 99;
+    int *n = &m;
+    // (*n)++;
+    // n = n  + 1;
+    *n = *n + 1;
+    cout<<*n<<endl;
 }
