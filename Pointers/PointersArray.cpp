@@ -13,4 +13,13 @@ cout<<"the memory of first block "<<*(arr+2)<<endl;
 cout<<"the memory of first block "<<*arr+2<<endl;
 cout<<"the memory of first block "<<*arr+3<<endl;
 cout<<"the memory of first block "<<*arr+4<<endl;
+
+// difference between array and pointers
+
+int temp[10] = {1,2};
+cout<< sizeof(temp)<<endl; // 40   no of block in array x 10;
+
+int *t = &temp[0];
+cout<< sizeof(t)<<endl; // 4  // single element 
+
 }
