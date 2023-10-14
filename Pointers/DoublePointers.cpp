@@ -1,6 +1,13 @@
 #include <iostream>
 using namespace std;
 
+void updateValue(int **p){
+    // p = p + 1; // No change
+
+    // *p = *p + 1;  // address change
+    
+    **p = **p + 1;  // value change
+}
 int main(){
     int i = 10;
     int *p1 = &i;
@@ -17,7 +24,16 @@ int main(){
     cout<< *p2 <<endl; // 0x61ff08
     cout<< **p3 <<endl; // 0x61ff08
 
-    cout << &p1 << endl;
-    cout << p2 << endl;
-    cout << p3 << endl;
+
+    int m = 9;
+    int *n = &m;
+    int **s = &n;
+
+    cout<<"Before "<<m<<endl;
+    cout<<"Before "<<n<<endl;
+    cout<<"Before "<<s<<endl;
+    updateValue(s);
+    cout<<"Before "<<m<<endl;
+    cout<<"Before "<<n<<endl;
+    cout<<"Before "<<s<<endl;
 }
