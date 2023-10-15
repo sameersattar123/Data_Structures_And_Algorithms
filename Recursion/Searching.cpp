@@ -50,6 +50,26 @@ bool LinearSearch(int arr[], int size, int key)
     }
 }
 
+bool BinarySearch(int arr[] , int s , int e , int key){
+    if (s>e){  // Base Condition
+        return false;
+    }
+
+    int mid = s + (e-s)/2;
+
+    if (arr[mid] == key){  // Base Condition
+        return true;
+    }
+
+    if (arr[mid] < key){
+        return BinarySearch(arr , mid + 1 , e , key);
+    }
+    else {
+        return BinarySearch(arr , s , mid - 1 , key);
+    }
+
+}
+
 int main()
 {
     // Question : 01
@@ -71,6 +91,7 @@ int main()
     cout<<total<<endl;
 
     // linear search using recursion
+
     int arr[5]{1, 2, 3, 4, 5};
     int size = 5;
     int key = 1;
@@ -83,4 +104,11 @@ int main()
     {
         cout << "not found" << endl;
     }
+
+    // Binary Search using recursion
+
+    int arr[5] = {1, 2, 3, 4, 5};
+    int key = 1;
+
+    cout << BinarySearch(arr, 0 ,4,key)<<endl;
 }
