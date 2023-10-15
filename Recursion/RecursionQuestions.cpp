@@ -4,7 +4,7 @@ using namespace std;
 void reachHome(int src , int dest){
     cout<<"src "<<src<<" dest "<<dest<<endl;
     if (src == dest){  // base cpnsition
-        cout<<"ghar poucnh gaye"<<endl;
+        cout<<"reach"<<endl;
         return;
     }
      src++;  // proceesing
