@@ -52,24 +52,25 @@ bool LinearSearch(int arr[], int size, int key)
 
 int main()
 {
-    // // Question : 01
-    // int arr[5] = {1, 2, 53, 224, 2225};
-    // int size = 5;
-    // bool ans = isSorted(arr, size);
+    // Question : 01
+    int arr[5] = {1, 2, 53, 224, 2225};
+    int size = 5;
+    bool ans = isSorted(arr, size);
 
-    // if (ans){
-    //     cout<<"Array is sorted"<<endl;
-    // }
-    // else{
-    //     cout<<"Array is not sorted"<<endl;
-    // }
+    if (ans){
+        cout<<"Array is sorted"<<endl;
+    }
+    else{
+        cout<<"Array is not sorted"<<endl;
+    }
 
-    // // Question : 02
-    // int arr2[5] = {1,2,3,4,5};
-    // int size2 = 5;
-    // int total =  getSum(arr2 , size2);
-    // cout<<total<<endl;
+    // Question : 02
+    int arr2[5] = {1,2,3,4,5};
+    int size2 = 5;
+    int total =  getSum(arr2 , size2);
+    cout<<total<<endl;
 
+    // linear search using recursion
     int arr[5]{1, 2, 3, 4, 5};
     int size = 5;
     int key = 1;
