@@ -35,6 +35,23 @@ void sayDigits(int n , string arr[]){
     
     cout<<arr[digit]<<" "; 
 }
+
+void reverse(string &name , int i , int j){
+    if (i > j){  // base condition
+        return;
+    }
+
+    int swap = name[i];  // processing
+    name[i] = name[j];
+    name[j] = swap;
+ 
+    i++;
+    j--;
+
+    reverse(name , i , j); // recursive relation
+
+
+}
 int main(){
 int src = 1;
 int dest = 10;
@@ -54,6 +71,11 @@ string arr[10] = {
 
 sayDigits(s, arr);
 
+string personName = "sameer";
+
+reverse(personName , 0 , personName.length()-1);
+
+cout<<personName<<endl;
 
 
 

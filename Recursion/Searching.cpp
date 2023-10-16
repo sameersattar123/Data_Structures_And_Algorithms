@@ -62,10 +62,10 @@ bool BinarySearch(int arr[] , int s , int e , int key){
     }
 
     if (arr[mid] < key){
-        return BinarySearch(arr , mid + 1 , e , key);
+        return BinarySearch(arr , mid + 1 , e , key); // recursive relation
     }
     else {
-        return BinarySearch(arr , s , mid - 1 , key);
+        return BinarySearch(arr , s , mid - 1 , key);  // recursive relation
     }
 
 }
