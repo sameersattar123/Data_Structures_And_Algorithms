@@ -15,3 +15,19 @@ int src = 1;
 // };
 
 // sayDigits(s, arr);
+
+// string personName = "sameer";
+
+// reverse(personName , 0 , personName.length()-1);
+
+// cout<<personName<<endl;
+
+// string personName2 = "non";
+
+// bool isPal = checkPalindrome(personName2 , 0 , personName2.length()-1);
+//  if (isPal){
+//     cout<<"It is palindrome"<<endl;
+//  }
+//  else{
+// cout<<"It is not palindrome"<<endl;
+//  }

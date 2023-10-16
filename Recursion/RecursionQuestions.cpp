@@ -66,6 +66,25 @@ bool checkPalindrome(string name , int i , int j){
     }
     
 }
+
+void arraySorted(int arr[] , int n){
+    if (n == 0 || n == 1){
+        return ;
+    }
+
+    for (int i = 0; i < n-1; i++){
+        if (arr[i] > arr[i+1]){
+            int swap = arr[i];
+            arr[i] = arr[i+1];
+            arr[i+1] = swap;
+        }
+    
+    arraySorted(arr, n-1);
+        
+    }
+    
+    
+}
 int main(){
 
 int src = 1;
@@ -100,6 +119,16 @@ bool isPal = checkPalindrome(personName2 , 0 , personName2.length()-1);
  }
  else{
 cout<<"It is not palindrome"<<endl;
+ }
+
+// Bubble Sort
+
+ int arr2[5] = {1,83,92,9,4};
+
+ arraySorted(arr2 , 5);
+
+ for (int i = 0; i < 5; i++){
+    cout<<arr2[i]<<" ";
  }
  
 }
