@@ -58,7 +58,7 @@ bool checkPalindrome(string name , int i , int j){
         return true;
     }
     
-    if (name[i] != name[j]){
+    if (name[i] != name[j]){  // processing
         return false;
     }
     else{
@@ -67,29 +67,30 @@ bool checkPalindrome(string name , int i , int j){
     
 }
 int main(){
-// int src = 1;
-// int dest = 10;
 
-// reachHome(src, dest); // basic recursion question
+int src = 1;
+int dest = 10;
 
-// int n = 4;
-// int ans = fab(n); // fabinacci series question
-// cout<<ans<<endl;
+reachHome(src, dest); // basic recursion question
 
-// int s;
-// cin>>s;
+int n = 4;
+int ans = fab(n); // fabinacci series question
+cout<<ans<<endl;
 
-// string arr[10] = {
-//     "zero" , "one" , "two" , "three" , "four" , "five" , "six" , "seven" , "eight" , "nine"
-// };
+int s;
+cin>>s;
 
-// sayDigits(s, arr);
+string arr[10] = {
+    "zero" , "one" , "two" , "three" , "four" , "five" , "six" , "seven" , "eight" , "nine"
+};
 
-// string personName = "sameer";
+sayDigits(s, arr);
 
-// reverse(personName , 0 , personName.length()-1);
+string personName = "sameer";
 
-// cout<<personName<<endl;
+reverse(personName , 0 , personName.length()-1);
+
+cout<<personName<<endl;
 
 string personName2 = "non";
 
