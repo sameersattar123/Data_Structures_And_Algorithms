@@ -29,10 +29,35 @@ class Hero {
     void setGrade(char g){ // setter
         grade = g;
     };
+    Hero(int health , char grade ,  string name){ // paramatric Contructor
+        cout<<"level , grade , name Constructor"<<endl;
+        this->grade = grade;
+        this->health = health;
+        this->name = name; 
+    }
+    Hero(char grade ,  string name){ // paramatric Contructor
+        cout<<"grade and name Constructor"<<endl;
+         this->grade = grade;
+        this->name = name;
+    }
+    Hero(string name){  // paramatric Contructor
+        cout<<"name Constructor"<<endl;
+        this->name = name;
+    }
+    Hero(){  // paramatric Contructor
+        cout<<"Default Constructor"<<endl;
+    }
+
+    void print(){
+        cout<<"print"<<endl;
+    }
 };
 int main(){
-  // Static Allocation
+// Static Allocation
   Hero person;
+//   Hero person("sameer"); // paramatric Contructor
+//   Hero person('B' , "sameer"); // paramatric Contructor
+//   Hero person( 78 , 'S' , "sameer" ); // paramatric Contructor
 
   // Access Person using Static Allocation 
   person.setHealth(34);
@@ -44,6 +69,10 @@ int main(){
 
   // Dynamic Allocation
   Hero *Person = new Hero;
+//   Hero *Person = new Hero("sameeer"); // paramatric Contructor
+//   Hero *Person = new Hero('S' , "sameer"); // paramatric Contructor
+//   Hero *Person = new Hero(98 , 'B' , "ali");  // paramatric Contructor
+  Person->print();
 
  // Access Person using Dynamics Allocation
   Person->setHealth(344);
