@@ -49,14 +49,16 @@ public:
         this->grade = grade;
         this->name = name;
     }
-    Hero(string name)
-    { // paramatric Contructor
+    Hero(string name){ // paramatric Contructor
         cout << "name Constructor" << endl;
         this->name = name;
     }
-    Hero()
-    { // paramatric Contructor
+    Hero(){ // without paramatric Contructor
         cout << "Default Constructor" << endl;
+    }
+
+    Hero(Hero& temp){  // Copy Constructor
+        cout << "Copy Constructor" << endl;
     }
 
     void print()
@@ -81,7 +83,7 @@ int main()
     cout << person.getGrade() << endl;
 
     Hero CopyPerson(person); // Copy Constructor
-    CopyPerson.print();      // print || same values as person
+    CopyPerson.print(); 
 
     // Dynamic Allocation
     Hero *Person = new Hero;
