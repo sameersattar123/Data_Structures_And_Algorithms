@@ -57,6 +57,10 @@ public:
         cout << "Default Constructor" << endl;
     }
 
+    ~Hero(){ // Destructor Contructor
+        cout << "Destructor Constructor" << endl;
+    }
+
     Hero(Hero& temp){  // Copy Constructor
         cout << "Copy Constructor" << endl;
     }
@@ -99,4 +103,7 @@ int main()
     cout << Person->getName() << endl;
     cout << Person->getHealth() << endl;
     cout << Person->getGrade() << endl;
+
+    delete Person; // for calling destructor 
+    
 }
