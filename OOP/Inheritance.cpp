@@ -21,7 +21,7 @@ class Human{
 class Male: public Human{ // Single Inheritancce
     public:
     string color;
-
+    
     void sleep2(){
         cout<<"I am sleeping2"<<endl;
     }
@@ -36,6 +36,13 @@ class Female: public Male{ // Multi-level Inheritance : female inheritant male a
         cout<<"I am sleeping3"<<endl;
     }
 
+};
+
+class Student: public Male , public Female{ // Multiple Inheritance
+    public:
+    void Name(){
+        cout<<"My name is student"<<endl;
+    }
 };
 
 int main(){
@@ -53,4 +60,8 @@ int main(){
   sameera.sleep1(); // Multi level Inheritance
   sameera.sleep2(); // Multi level Inheritance 
   sameera.sleep3();
+
+  Student shabana;
+  shabana.sleep3(); // Multiple Inheritance
+  shabana.Name(); // Multiple Inheritance
 }
