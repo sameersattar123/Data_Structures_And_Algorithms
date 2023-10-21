@@ -30,6 +30,13 @@ class Male: public Human{ // Single Inheritancce
         this->color = color;
     }
 };
+class Female: public Male{ // Multi-level Inheritance : female inheritant male and male inheritant human , this type if inheritance is called Multi level Inheritance
+    public:
+    void sleep3(){
+        cout<<"I am sleeping3"<<endl;
+    }
+
+};
 
 int main(){
   Male sameer;
@@ -41,4 +48,9 @@ int main(){
   cout<<sameer.color<<endl;
   sameer.sleep1(); // calling object by single inheritance 
   sameer.sleep2();  
+
+  Female sameera;
+  sameera.sleep1(); // Multi level Inheritance
+  sameera.sleep2(); // Multi level Inheritance 
+  sameera.sleep3();
 }
