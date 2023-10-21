@@ -12,15 +12,20 @@ class Human{
     void setName(string name){
         this->name = name;
     }
+
+      void sleep1(){
+        cout<<"I am sleeping1"<<endl;
+    }
 };
 
-class Male: public Human{
+class Male: public Human{ // Single Inheritancce
     public:
     string color;
 
-    void sleep(){
-        cout<<"I am sleeping"<<endl;
+    void sleep2(){
+        cout<<"I am sleeping2"<<endl;
     }
+
      void setColor(string color){
         this->color = color;
     }
@@ -34,5 +39,6 @@ int main(){
   cout<<sameer.age<<endl;  
   cout<<sameer.name<<endl;
   cout<<sameer.color<<endl;
-  sameer.sleep();  
+  sameer.sleep1(); // calling object by single inheritance 
+  sameer.sleep2();  
 }
