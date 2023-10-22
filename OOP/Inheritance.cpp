@@ -21,7 +21,6 @@ class Human{
 class Male: public Human{ // Single Inheritancce
     public:
     string color;
-    
     void sleep2(){
         cout<<"I am sleeping2"<<endl;
     }
@@ -45,6 +44,23 @@ class Student: public Male , public Female{ // Multiple Inheritance
     }
 };
 
+class A {
+    public:
+    void func(){
+        cout<<"Function of A"<<endl;
+    }
+};
+class B {
+    public:
+    void func(){
+        cout<<"Function of B"<<endl;
+    }
+};
+
+class C: public A , public B {
+    
+};
+
 int main(){
   Male sameer;
   sameer.setAge(34);  
@@ -64,4 +80,8 @@ int main(){
   Student shabana;
   shabana.sleep3(); // Multiple Inheritance
   shabana.Name(); // Multiple Inheritance
+
+  C category;
+  category.A::func();  // inheritance Ambiguity : same fucntion in different classes
+  category.B::func();  // inheritance Ambiguity : same fucntion in different classes
 }
