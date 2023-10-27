@@ -43,6 +43,7 @@ int getLenght(Node *head)
 };
 
 void InsertionAtHead(Node* &head , int d){ // Insertion At Head
+    // create a new node
     Node* temp = new Node(d);
     temp->next = head;
     head->prev = temp;
@@ -50,10 +51,41 @@ void InsertionAtHead(Node* &head , int d){ // Insertion At Head
 }
 
 void InsertionAtTail(Node* &tail , int d){ // Insertion At Tail
+    // create a new node
     Node* temp = new Node(d);
     tail->next = temp;
     temp->prev = tail;
     tail = temp;
+}
+
+void InsertAtMiddle(Node *&tail, Node *&head, int position, int d) // insertion at any middle position
+{
+    if (position == 1)
+    {
+        InsertionAtHead(head, d);
+        return;
+    }
+
+    Node *temp = head;
+    int cnt = 1;
+    while (cnt < position - 1)
+    {
+        temp = temp->next;
+        cnt++;
+    }
+
+    // inserting at last position
+    if (temp->next == NULL)
+    {
+        InsertionAtTail(tail, d);
+        return;
+    }
+
+    Node *insertNewNode = new Node(d);
+    insertNewNode->next = temp->next;
+    temp->next->prev = insertNewNode;
+    temp->next = insertNewNode;
+    insertNewNode->prev = temp;
 }
 
 int main()
@@ -71,13 +103,15 @@ int main()
     print(head);
     InsertionAtHead(head,500);
     print(head);
-    InsertionAtHead(head,500);
-    print(head);
     InsertionAtTail(tail,50);
     print(head);
     InsertionAtTail(tail,20);
     print(head);
     InsertionAtTail(tail,10);
+    print(head);
+    InsertAtMiddle(tail , head , 8 , 15);
+    print(head);
+    InsertAtMiddle(tail , head , 9 , 12);
     print(head);
     return 0;
 }
