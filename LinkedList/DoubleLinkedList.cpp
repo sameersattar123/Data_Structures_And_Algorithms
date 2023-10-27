@@ -23,7 +23,7 @@ void print(Node *head)
     Node *temp = head;
     while (temp != NULL)
     {
-        cout << temp->data;
+        cout << temp->data<<" ";
         temp = temp->next;
     }
     cout << endl;
@@ -42,12 +42,20 @@ int getLenght(Node *head)
     return lenght;
 };
 
+void InsertionAtHead(Node* &head , int d){
+    Node* temp = new Node(d);
+    temp->next = head;
+    head->prev = temp;
+    head = temp;
+}
+
 int main()
 {
     Node *node1 = new Node(100);
     Node *head = node1;
     print(head);
     cout << getLenght(head) << endl;
-
+    InsertionAtHead(head,200);
+    print(head);
     return 0;
 }
