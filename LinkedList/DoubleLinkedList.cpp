@@ -15,6 +15,17 @@ public:
         this->next = NULL;
         this->prev = NULL;
     }
+        // decontructor
+    ~Node()
+    {
+        int value = this->data;
+        while (this->next != NULL)
+        {
+            delete next;
+            this->next = NULL;
+        };
+        cout << "Memory is free for node with data " << value << endl;
+    };
 };
 
 // traversing of linked list
@@ -62,8 +73,8 @@ void InsertAtMiddle(Node *&tail, Node *&head, int position, int d) // insertion 
 {
     if (position == 1)
     {
-        InsertionAtHead(head, d);
-        return;
+       InsertionAtHead(head,d);
+       return;
     }
 
     Node *temp = head;
@@ -86,6 +97,39 @@ void InsertAtMiddle(Node *&tail, Node *&head, int position, int d) // insertion 
     temp->next->prev = insertNewNode;
     temp->next = insertNewNode;
     insertNewNode->prev = temp;
+}
+
+void deleteNode(int position, Node *&head)
+{
+    // Deleting First / Start Node
+    if (position == 1)
+    {
+       // create a new node
+    Node* temp = head;
+    temp->next->prev = NULL;
+    head = temp->next;
+    temp->next = NULL;
+    delete temp;
+    }
+    else
+    {
+        // Deleting Middle / End Node
+        Node *curr = head;
+        Node *perv = NULL;
+
+        int count = 1;
+        while (count < position)
+        {
+            perv = curr;
+            curr = curr->next;
+            count++;
+        };
+
+        curr->prev = NULL;
+        perv->next = curr->next;
+        curr->next = NULL;
+        delete curr;
+    }
 }
 
 int main()
@@ -113,5 +157,10 @@ int main()
     print(head);
     InsertAtMiddle(tail , head , 9 , 12);
     print(head);
+    deleteNode(1,head);
+    print(head);
+    deleteNode(7,head);
+    print(head);
     return 0;
 }
+
