@@ -4,6 +4,7 @@ using namespace std;
 
 int main(){
 
+    // Stack Data Structure implementation using STL
     stack <int> s;
 
     // Push Operation 
@@ -27,6 +28,7 @@ int main(){
     cout<<"Stack is not empty"<<endl;
     }
     
+    // Size Operation
     cout<<"Stack size "<<s.size()<<endl;
     
     
