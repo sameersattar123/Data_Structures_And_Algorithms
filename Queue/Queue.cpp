@@ -91,7 +91,7 @@ int main(){
         cout<<"Queue Empty"<<endl;
     }
     else{
-        cout<<"Queue Empty"<<endl;
+        cout<<"Queue Not Empty"<<endl;
     }
     
 
