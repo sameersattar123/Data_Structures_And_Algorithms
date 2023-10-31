@@ -10,7 +10,7 @@ class CircularQueue{
 
     // Constructor
     CircularQueue(int n){
-        size = 1000;
+        size = n;
         front = -1;
         rear = -1;
         arr = new int[size];
@@ -52,5 +52,21 @@ class CircularQueue{
 };
 
 int main(){
+    CircularQueue box(5);
+    box.enqueue(2);
+    box.enqueue(4);
+    box.enqueue(6);
+    box.enqueue(8);
+    box.enqueue(10);
+    box.enqueue(10); // Queue is full
+
+    box.dequeue();    
+    box.dequeue();    
+    box.dequeue();    
+    box.dequeue();    
+    box.dequeue();    
+    box.dequeue();    // Queue is empty
+
+
     
 }
