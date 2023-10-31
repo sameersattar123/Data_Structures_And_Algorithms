@@ -43,7 +43,7 @@ class CircularQueue{
         if (rear == front){ // first element
                 rear = front = -1;
         } else if (front == size -1) { // last element
-            front == 0;
+            front = 0;
         } else { 
             front++;
         }
