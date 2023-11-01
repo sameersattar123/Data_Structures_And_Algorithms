@@ -41,7 +41,7 @@ int main(){
     unordered_map<string,int> :: iterator it = m.begin();
 
     while ((it != m.end())){
-        cout<< it->first << " " << it->second <<endl;  // gives the unordered output because it is a unordered map buid in fucntion which gives unordered name with unorder key
+        cout<< it->first << " " << it->second <<endl;  // gives the unordered output because it is a unordered map buid in fucntion which gives unordered name with unorder key and gives n(0) complexitltiy 
         it++;
     }
     
