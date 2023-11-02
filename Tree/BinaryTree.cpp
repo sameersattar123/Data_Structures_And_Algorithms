@@ -64,15 +64,16 @@ void levelOrderTraversal(Node *root)
         {
         cout << temp->data << " ";
 
+            if (temp->left)
+            {
+                q.push(temp->left);
+            }
+            
             if (temp->right)
             {
                 q.push(temp->right);
             }
 
-            if (temp->left)
-            {
-                q.push(temp->left);
-            }
         }
     }
 }
@@ -114,7 +115,7 @@ int main()
 
     levelOrderTraversal(root);
 
-    cout<<"Inoorder Traversal is "<<endl;
+    cout<<"Inorder Traversal is "<<endl;
     InorderTraversal(root);
     cout<<endl;
 
@@ -122,6 +123,6 @@ int main()
     PreOrderTraversal(root);
     cout<<endl;
 
-    cout<<"Postoorder Traversal is "<<endl;
+    cout<<"Postorder Traversal is "<<endl;
     PostorderTraversal(root);
 }
