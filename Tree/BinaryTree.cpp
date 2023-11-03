@@ -68,7 +68,7 @@ void levelOrderTraversal(Node *root)
             {
                 q.push(temp->left);
             }
-            
+
             if (temp->right)
             {
                 q.push(temp->right);
@@ -108,11 +108,45 @@ void PostorderTraversal(Node* root){ // LRN
     cout<<root->data<<" "; // N
 }
 
+void BuildFromLevelOrder(Node* root){
+    queue<Node*> q;
+    int data;
+    cout<<"Enter data for root "<<endl;
+    cin>> data;
+    root = new Node(data);
+    q.push(root);
+
+
+    while(!q.empty()){
+        Node* temp = q.front();
+        q.pop();
+
+        cout<<"Enter data for left root "<<temp->data<<endl;
+        int LeftData;
+        cin>> LeftData;
+        if (LeftData != -1){
+            temp->left =  new Node(LeftData);
+            q.push(temp->left);
+        }
+
+
+        cout<<"Enter data for right root "<<temp->data<<endl;
+        int RightData;
+        cin>> RightData;
+        if (RightData != -1){
+            temp->right =  new Node(RightData);
+            q.push(temp->right);
+        }
+        
+    }
+}
+
 int main()
 {
     Node *root = NULL;
-    root = buildTree(root);
+    // BuildFromLevelOrder(root);  
 
+    root = buildTree(root);
     levelOrderTraversal(root);
 
     cout<<"Inorder Traversal is "<<endl;
