@@ -12,12 +12,12 @@ class heap {
     }
 
     void insert(int value){
-        size++;
+        size = size + 1;
         int index = size;
         arr[index] = value;
 
             while (index > 1){
-                 int parent = index / 2;
+                 int parent = index/2;
                     if (arr[parent] < arr[index]){
                         int temp = arr[parent];
                         arr[parent] = arr[index];
